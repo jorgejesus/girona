@@ -194,13 +194,50 @@ body {
 			    <footer class="fragment fade-up" style="font-size: 75%;">(por veces el filesystem se bloquea)</footer>
 				</section>
 			
-			
 			</section> <!--  production -->
+		    <section> <!--  layers -->
+				<section>
+					<h2> Subir Capas</h2>
+			 		<p class="fragment fade-up">Capas de suelos de 1 a 2 gigas </p>
+				 	<p class="fragment fade-up">Geotiff com COMPRESS=DEFLATE</p>
+			 		<p class="fragment fade-up">Mejor usar compression (deflate) que sin compression</p>
+			 		<p class="fragment fade-up">200 o 300 capas para subir  !!!</p>
+				</section>
+				
+				<section>
+					<h2> Geoserver REST</h2>
+			 		<img data-src="./img/rest-geoserver.png"></img>
+			 		<p class="fragment fade-up">Python script para subi las capas al geoserver (REST)</p>
+				</section>
+				
+				<section>
+				<h2>Comandos de Geonode</h2>
+				<p class="fragment fade-up">Geonode es basado en Django</p>
+				<p class="fragment fade-up">Tenemos linea de comandos, del genero</p>
+				<pre class="fragment fade-down">
+						<code data-trim data-noescape>
+						python manage.py updatelayers -v 3 --skip-geonode-registered
+						</code>
+				</pre>
+				<p class="fragment fade-up">El geonode es sincronizado com geoserver</p>
+				</section>
+			</section> <!--  end layers -->
+		
+		 <section> <!-- download layers -->
+		 	<h2>Bajar capas</h2>
+		 	<p class="fragment fade-up">Geotiff son bajados com un pedido WCS</p>
+		 	<p class="fragment fade-up">Para una capa de 2Gigas no es viavel</p>
+		   <p class="fragment fade-up">Hacking: Los url apunta para un FTP y no para el WCS</p>
+		 </section> <!--  end download -->
 
+		<section>
+			<h2>Y que más?</h2>
+			<br/><br/>
+			<h3>No hai mas !!!</h3>
+		</section>
+		
 
-
-		</div>
-		<!--  end of slides -->
+		</div><!--  end of slides -->
 
 	</div>
 	<!--  end of revela -->
