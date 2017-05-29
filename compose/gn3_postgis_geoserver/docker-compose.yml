@@ -11,7 +11,7 @@ version: '2'
 services:
 
     geonetwork:
-      image: geonetwork:postgres
+      image: geonetwork:3.0-postgres
       ports:
           - 8080:8080
       environment:
@@ -27,7 +27,7 @@ services:
           - postgis
     
     postgis:
-      image: postgres
+      image: postgres:9.4
       ports:
           - 5432:5432
       volumes:
