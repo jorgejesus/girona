@@ -31,4 +31,7 @@ COPY ./docker-entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
+COPY wait-for-it.sh /
+RUN chmod +x /wait-for-it.sh
+
 CMD ["catalina.sh", "run"]
