@@ -18,6 +18,7 @@ services:
           POSTGRES_DB_PASSWORD: mysecretpassword
       depends_on:
           - postgres
+      command: ["/wait-for-it.sh", "postgis:5432", "-t", "10", "--", "catalina.sh run"]
     
     postgres:
       image: postgres:9.4
