@@ -16,6 +16,8 @@ services:
           DATA_DIR: /var/lib/geonetwork_data
           POSTGRES_DB_USERNAME: postgres
           POSTGRES_DB_PASSWORD: mysecretpassword
+      links:
+          - postgres
       depends_on:
           - postgres
       command: ["/wait-for-it.sh", "postgis:5432", "-t", "10", "--", "catalina.sh run"]
