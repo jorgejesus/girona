@@ -12,7 +12,7 @@ services:
 
 
     geonetwork:
-      image: geonetwork:3.0-postgres
+      build: ./geonetwork
       ports:
           - 8080:8080
       environment:
